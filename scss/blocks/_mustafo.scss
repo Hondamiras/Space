@@ -1,35 +1,35 @@
-.site-header {
+.moon-site-header {
     margin: 40px 0 76px;
     padding-left: 55px;
 }
 
-.header {
+.moon-header {
     @include display($space: space-between);
 }
 
-.header-list {
+.moon-header-list {
     max-width: 850px;
     @include display($space: start);
     gap: 48px;
-    padding: 39px 165px 39px 123px;
+    padding: 0 165px 0 123px;
     backdrop-filter: blur(81.54845428466797px);
-    // position: relative;
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 473px;
-    //     height: 1px;
-    //     background-image: url(../../images/header-img.svg);
-    //     background-repeat: no-repeat;
-    //     background-size: 100%;
-    //     background-position: center;
-    //     left: -450px;
-    //     top: 50px;
-    // }
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 473px;
+        height: 1px;
+        background-image: url(../../images/header-img.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        left: -450px;
+        top: 50px;
+    }
 }
 
-.header-link {
+.moon-header-link {
+    padding: 40px 0;
     display: inline-block;
     backdrop-filter: blur(81.54845428466797px);
     font-size: 16px;
@@ -46,7 +46,7 @@
     }
 }
 
-.header-span {
+.moon-header-span {
     margin-right: 12px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 @media (max-width: 1250px) {
-    .site-header {
+    .moon-site-header {
         margin: 40px 0 40px;
         padding-left: 39px;
     }
@@ -154,6 +154,9 @@
 
     .moon-hero-list {
         @include display($space: center);
+       
+    }
+
     }
 
     .moon-hero-subtitle {
@@ -166,42 +169,42 @@
     }
 
     .moon-hero-bold-wrapper {
-        @include display($space: center);
+        // @include display($space: center);
     }
 
     .moon-hero-img {
         width: 300px;
         height: 300px;
     }
-}
+
 
 @media (max-width: 1080px) {
-    .site-header {
+    .moon-site-header {
         margin: 0 0 40px;
     }
 
-    .header-list {
+    .moon-header-list {
         width: 450px;
         padding: 39px 43px;
         gap: 37px;
     }
 
-    .header-span {
+    .moon-header-span {
         display: none;
     }
 
-    .header-link {
+    .moon-header-link {
         @include textStyle($MB: 0, $FS: 14px, $FW: 400, $LH: 16px, $Color: #fff);
     }
 }
 
 @media (max-width: 650px) {
-    .site-header {
+    .moon-site-header {
         margin: 24px 0 24px;
         padding: 0 24px;
     }
 
-    .header-list {
+    .moon-header-list {
         display: none;
     }
 
