@@ -1,0 +1,262 @@
+.site-header {
+    margin: 40px 0 76px;
+    padding-left: 55px;
+}
+
+.header {
+    @include display($space: space-between);
+}
+
+.header-list {
+    max-width: 850px;
+    @include display($space: start);
+    gap: 48px;
+    padding: 39px 165px 39px 123px;
+    backdrop-filter: blur(81.54845428466797px);
+    // position: relative;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 473px;
+    //     height: 1px;
+    //     background-image: url(../../images/header-img.svg);
+    //     background-repeat: no-repeat;
+    //     background-size: 100%;
+    //     background-position: center;
+    //     left: -450px;
+    //     top: 50px;
+    // }
+}
+
+.header-link {
+    display: inline-block;
+    backdrop-filter: blur(81.54845428466797px);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 2.700000047683716px;
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom-color: white;
+    }
+}
+
+.header-span {
+    margin-right: 12px;
+}
+
+
+.moon-body {
+    background-image: url("../images/Moon-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.moon-hero-section {
+    padding: 0 163px 118px 166px;
+}
+
+.moon-hero-title {
+    @include textStyle($MB: 0, $FS: 28px, $FW: 400, $LH: 33px, $Color: #fff);
+    text-transform: uppercase;
+}
+
+.moon-hero-title span {
+    opacity: 25%;
+    margin-right: 28px;
+}
+
+.moon-hero {
+    @include display($space: space-between);
+    margin-top: 64px;
+}
+
+.moon-hero-content-wrapper {
+    width: 445px;
+}
+
+.moon-hero-img {
+    width: 445px;
+    height: 445px;
+}
+
+.moon-hero-list {
+    @include display($space: start);
+    gap: 35px;
+    margin-bottom: 37px;
+}
+
+.moon-hero-item a {
+    // position: relative;
+    @include textStyle($MB: 0, $FS: 16px, $FW: 400, $LH: 19px, $Color: #fff);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 12px;
+    transition: all 0.4s;
+
+    &:hover {
+        border-bottom-color: #fff;
+    }
+}
+
+.moon-hero-subtitle {
+    @include textStyle($MB: 14px, $FS: 100px, $FW: 400, $LH: 114px, $Color: #fff);
+}
+
+.moon-hero-text {
+    @include textStyle($MB: 54px, $FS: 18px, $FW: 400, $LH: 32px, $Color: #D0D6F9);
+}
+
+.moon-hero-bold-wrapper {
+    @include display($space: start);
+    gap: 79px;
+}
+
+.moon-hero-bold p {
+    @include textStyle($MB: 12px, $FS: 14px, $FW: 400, $LH: 16px, $Color: #D0D6F9);
+}
+
+.moon-hero-bold strong {
+    @include textStyle($MB: 0, $FS: 28px, $FW: 400, $LH: 32px, $Color: #fff);
+}
+
+.moon-header-menu {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+    .site-header {
+        margin: 40px 0 40px;
+        padding-left: 39px;
+    }
+
+    .moon-hero-title {
+        @include textStyle($MB: 0, $FS: 20px, $FW: 400, $LH: 24px, $Color: #fff);
+    }
+
+    .moon-hero {
+        flex-direction: column;
+        gap: 53px;
+    }
+
+    .moon-hero-section {
+        padding: 0 98px 62px 98px;
+    }
+
+    .moon-hero-content-wrapper {
+        text-align: center;
+    }
+
+    .moon-hero-list {
+        @include display($space: center);
+    }
+
+    .moon-hero-subtitle {
+        @include textStyle($MB: 0, $FS: 80px, $FW: 400, $LH: 91px, $Color: #fff);
+    }
+
+    .moon-hero-text {
+        width: 100%;
+        @include textStyle($MB: 49px, $FS: 16px, $FW: 400, $LH: 28px, $Color: #D0D6F9);
+    }
+
+    .moon-hero-bold-wrapper {
+        @include display($space: center);
+    }
+
+    .moon-hero-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .site-header {
+        margin: 0 0 40px;
+    }
+
+    .header-list {
+        width: 450px;
+        padding: 39px 43px;
+        gap: 37px;
+    }
+
+    .header-span {
+        display: none;
+    }
+
+    .header-link {
+        @include textStyle($MB: 0, $FS: 14px, $FW: 400, $LH: 16px, $Color: #fff);
+    }
+}
+
+@media (max-width: 650px) {
+    .site-header {
+        margin: 24px 0 24px;
+        padding: 0 24px;
+    }
+
+    .header-list {
+        display: none;
+    }
+
+    .moon-header-menu {
+        display: block;
+    }
+
+    .moon-hero-title {
+        @include textStyle($MB: 0, $FS: 16px, $FW: 400, $LH: 19px, $Color: #fff);
+        text-align: center;
+    }
+
+    .moon-hero-title span {
+        margin-right: 18px;
+    }
+
+    .moon-hero-section {
+        padding: 0 24px 58px;
+    }
+
+    .moon-hero-content-wrapper {
+        width: 100%;
+    }
+
+    .moon-hero-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .moon-hero-list {
+        margin-bottom: 20px;
+    }
+
+    .moon-hero-item a {
+        @include textStyle($MB: 0, $FS: 14px, $FW: 400, $LH: 16px, $Color: #fff);
+    }
+
+    .moon-hero-subtitle {
+        @include textStyle($MB: 0, $FS: 56px, $FW: 400, $LH: 64px, $Color: #fff);
+    }
+
+    .moon-hero-text {
+        max-width: 327px;
+        margin: 0 auto;
+        @include textStyle($MB: 32px, $FS: 15px, $FW: 400, $LH: 25px, $Color: #D0D6F9);
+    }
+
+    .moon-hero-bold-wrapper {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .moon-hero {
+        gap: 26px;
+        margin-top: 32px;
+    }
+
+}
